@@ -4,8 +4,9 @@ SOURCEDIR = src
 BUILDDIR = build
 # BUILDDIR = $(CURDIR)/build
 
-SOURCES = $(wildcard $(SOURCEDIR)/*.cpp)
+SOURCES = $(shell find $(SOURCEDIR) -name '*.cpp')
 TARGETS = $(patsubst $(SOURCEDIR)/%.cpp,$(BUILDDIR)/%.o,$(SOURCES))
+DIRS = $(patsubst %/,%,$(dir $(TARGETS)))
 
 
 all: $(TARGETS) | buildDir
@@ -16,7 +17,7 @@ $(BUILDDIR)/%.o: $(SOURCEDIR)/%.cpp | buildDir
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 buildDir:
-	mkdir -p $(BUILDDIR)
+	mkdir -p $(DIRS)
 
 clean:
 	rm -rf build
