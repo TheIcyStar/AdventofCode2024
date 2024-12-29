@@ -1,11 +1,10 @@
 #include <iostream>
+#include "dayXX.h"
 
-int part1(){
-    std::cout << "1111";
-
-    return 0;
+void day00_part1(){
+    std::cout << "Day 0 part 1 boilerplate\n";
 }
 
-int part2(){
-    return 0;
+void day00_part2(){
+    std::cout << "Day 0 part 2 boilerplate\n";
 }
