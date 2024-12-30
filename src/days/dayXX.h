@@ -4,5 +4,7 @@
 
 void day00_part1();
 void day00_part2();
+void day01_part1();
+void day01_part2();
 
 #endif
