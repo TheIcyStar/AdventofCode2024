@@ -9,6 +9,7 @@ const std::map<std::string, dayPartImpl> functionMap {
     {"0-1", day00_part1}, {"0-2", day00_part2},
     {"1-1", day01_part1}, {"1-2", day01_part2},
     {"2-1", day02_part1}, {"2-2", day02_part2},
+    {"3-1", day03_part1}, {"3-2", day03_part2},
 };
 
 
